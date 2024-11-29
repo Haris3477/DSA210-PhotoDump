@@ -1,47 +1,58 @@
-# PhotoDump: Snapchat Activity Analysis
+PhotoDump: Google Photos Analysis
 
-## Description
-PhotoDump is a data science project focused on analyzing my Snapchat usage patterns, particularly around streaks. By examining historical data from Snapchat, this project aims to identify the average times of the day I typically send Snaps, receive Snaps, and open the app. This analysis will provide meaningful insights into my Snapchat habits over the past few years.
+Description
 
-## Motivation
-Social media platforms like Snapchat play a significant role in daily interactions. This project is motivated by the curiosity to better understand my own Snapchat behavior and streak activity. By analyzing when I am most active on the app, I hope to uncover patterns and trends in my usage habits.
+The aim of this project is to analyze photo metadata from my Google Photos account to determine when I typically take photos during the day. Using the timestamps embedded in photo metadata (EXIF data), I will uncover patterns in my photo-taking habits, such as the time of day when I am most active with photography.
 
-## Tools to Be Used
+Motivation
+
+While analyzing Snapchat usage previously, I realized that photos taken throughout the day could also reveal interesting insights about my daily activity. This project is motivated by the desire to understand when I am most likely to capture moments and whether there are noticeable patterns in my photo-taking behavior over time.
+
+Tools to Be Used
+
 - Programming Language: Python  
-- Libraries (tentative):  
-  - Pandas: For data cleaning and manipulation  
-  - Matplotlib & Seaborn: For creating visualizations  
-  - NumPy: For numerical analysis  
-  - Jupyter Notebook: For documenting and presenting the analysis  
+- Libraries:
+- Pandas: For data extraction, cleaning, and analysis.
+- Matplotlib & Seaborn: For creating visualizations such as histograms and heatmaps.
+- NumPy: For numerical computations.
+- Pillow: To extract EXIF metadata (timestamps) from photos.
+- OS Module: To navigate and process files in directories.
+- Google Photos API: For programmatically fetching photo metadata.
+- Jupyter Notebook: For documenting and presenting the analysis.
 
-## Data Source
-The dataset for this project will be requested directly from Snapchat. The data will likely include timestamps for sent, received, and opened Snaps. After preprocessing, it will be used to extract meaningful patterns and trends.
+Data Source
 
-## Data Processing
-1. Raw Data: The raw data from Snapchat will contain details about my activity, such as sent and received Snaps.
-2. Preprocessing: The data will be cleaned and structured for analysis. This may include:  
-   - Converting timestamps into readable formats  
-   - Extracting key activity patterns (e.g., sent/received/opened times)  
-   - Removing unnecessary fields for streamlined analysis  
+The data for this project will be sourced from my Google Photos account. Photos will either be:
+1. Manually downloaded for local processing, or  
+2. Fetched using the **Google Photos API** to retrieve metadata programmatically.  
 
-## Data Visualizations
-- Time-Based Activity**: Visualize average times of day for sending, receiving, and opening Snaps over the past three years.  
-- Daily and Weekly Trends**: Highlight which days and times I am most active on Snapchat.  
-- Heatmaps: Create a heatmap to show activity density by time and day.
+The primary information used will be timestamps embedded in the EXIF data of the photos.
 
-## Goals
-- Determine the **average times of the day** I send and receive Snaps.  
-- Identify the **average times of the day** I open Snapchat.  
-- Visualize usage patterns through interactive and static charts.
+Data Processing
 
-## Limitations
-- **Personal Data**: Since the project uses personal Snapchat data, careful attention will be paid to privacy and sensitive information.  
-- **Data Scope**: The analysis is limited to the data provided by Snapchat, which may not include additional activity context.
+1. Raw Data: Extract timestamps and other metadata from the photos using EXIF data.  
+2. Preprocessing:
+   - Convert timestamps to readable formats (example: hour of the day).
+   - Filter out photos without valid metadata.
+3. Exploratory Data Analysis (EDA):
+   - Group and analyze photos by time of day, day of the week, and other possible patterns.
+4. Final Dataset: A clean and structured dataset ready for visualization and deeper analysis.
 
-## Findings (To Be Added Later)
-The findings will include detailed insights into my Snapchat habits, such as the times I am most active and patterns over different days and years.
+ Data Visualizations
 
-## Future Work
-- Expand the analysis to include other data points from Snapchat, if available.  
-- Incorporate machine learning models to predict future Snapchat usage patterns based on historical data.  
-- Explore connections between Snapchat usage and external factors like events or schedules.
+- Time-Based Activity:
+- Create histograms to show the frequency of photos taken at different times of the day.
+- Daily Trends:
+- Analyze photo activity across days of the week to identify any patterns.
+- Heatmaps:
+- Generate heatmaps to display photo-taking density by hour and day.
+
+Goals
+
+- Determine the **average times of the day** I take photos.
+- Identify patterns in photo-taking activity across different timeframes (daily, weekly, etc.).
+- Visualize photo-taking trends using clear and informative charts.
+
+ Findings
+
+Findings will include detailed insights into my photo-taking habits, such as peak times for photography and any interesting trends over time.
