@@ -40,16 +40,16 @@ Data Processing
 
  Data Visualizations
 
-- Time-Based Activity:
+- Time-Based Activity
 - Create histograms to show the frequency of photos taken at different times of the day.
-- Daily Trends:
+- Daily Trends
 - Analyze photo activity across days of the week to identify any patterns.
-- Heatmaps:
+- Heatmaps
 - Generate heatmaps to display photo-taking density by hour and day.
 
 Goals
 
-- Determine the **average times of the day** I take photos.
+- Determine the average times of the day I take photos.
 - Identify patterns in photo-taking activity across different timeframes (daily, weekly, etc.).
 - Visualize photo-taking trends using clear and informative charts.
 
