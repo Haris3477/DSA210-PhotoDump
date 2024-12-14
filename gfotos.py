@@ -3,6 +3,7 @@ import random
 from datetime import datetime, timedelta
 from PIL import Image
 from PIL.ExifTags import TAGS
+import pandas as pd
 
 # Path to the photos folder
 PHOTO_FOLDER = "photos"
@@ -16,6 +17,7 @@ def generate_random_timestamp():
     )
     return random_date.strftime("%Y:%m:%d %H:%M:%S")
 
+# Function to extract photo metadata
 def extract_photo_metadata(photo_folder):
     metadata_list = []
 
@@ -38,14 +40,22 @@ def extract_photo_metadata(photo_folder):
                         timestamp = generate_random_timestamp()
 
                     print(f"{file}: {timestamp}")
-                    metadata_list.append({"file": file, "timestamp": timestamp})
+                    metadata_list.append({"Filename": file, "Timestamp": timestamp})
                 except Exception as e:
                     print(f"Error reading {file}: {e}")
 
     return metadata_list
 
-# Call the function
+# Extract metadata
 metadata = extract_photo_metadata(PHOTO_FOLDER)
+
+# Save metadata to a CSV file
+if metadata:
+    df = pd.DataFrame(metadata)
+    df.to_csv("photo_metadata.csv", index=False)
+    print(f"\nMetadata saved to 'photo_metadata.csv'.")
+else:
+    print("\nNo metadata extracted.")
 
 # Print summary
 print(f"\nProcessed {len(metadata)} photos.")
