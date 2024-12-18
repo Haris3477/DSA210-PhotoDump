@@ -7,6 +7,7 @@ import pandas as pd
 
 # Path to the photos folder
 PHOTO_FOLDER = "photos"
+OUTPUT_CSV = "photo_metadata.csv"
 
 # Function to generate a random timestamp
 def generate_random_timestamp():
@@ -39,10 +40,10 @@ def extract_photo_metadata(photo_folder):
                     if not timestamp:
                         timestamp = generate_random_timestamp()
 
-                    print(f"{file}: {timestamp}")
                     metadata_list.append({"Filename": file, "Timestamp": timestamp})
                 except Exception as e:
                     print(f"Error reading {file}: {e}")
+                    metadata_list.append({"Filename": file, "Timestamp": generate_random_timestamp()})
 
     return metadata_list
 
@@ -52,8 +53,8 @@ metadata = extract_photo_metadata(PHOTO_FOLDER)
 # Save metadata to a CSV file
 if metadata:
     df = pd.DataFrame(metadata)
-    df.to_csv("photo_metadata.csv", index=False)
-    print(f"\nMetadata saved to 'photo_metadata.csv'.")
+    df.to_csv(OUTPUT_CSV, index=False)
+    print(f"\nMetadata saved to '{OUTPUT_CSV}'.")
 else:
     print("\nNo metadata extracted.")
 
