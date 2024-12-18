@@ -65,3 +65,14 @@ except FileNotFoundError:
     print(f"Error: {csv_file} not found. Please run gfotos.py to generate the file.")
 except Exception as e:
     print(f"An error occurred: {e}")
+
+# 5. Heatmap: Hour vs Day of the Week
+heatmap_data = df.pivot_table(index='Day', columns='Hour', aggfunc='size', fill_value=0)
+plt.figure(figsize=(12, 6))
+sns.heatmap(heatmap_data, annot=True, fmt="d", cmap="YlGnBu")
+plt.title('Photo Distribution by Hour and Day of the Week')
+plt.xlabel('Hour of the Day')
+plt.ylabel('Day of the Week')
+plt.savefig('photos_heatmap_hour_day.png')
+plt.show()
+# End of visualize_photos.py
