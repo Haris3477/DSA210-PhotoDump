@@ -26,11 +26,6 @@ env/
 *_metadata.csv
 combined_metadata.csv
 
-# Ignore output images and visualizations
-*.png
-*.jpg
-*.jpeg
-
 # Ignore IDE-specific files
 .vscode/
 .idea/
