@@ -22,10 +22,11 @@ env/
 *.swp
 *.swo
 
-# Ignore CSV files 
-*.csv
+# Ignore dataset-specific CSV files
+*_metadata.csv
+combined_metadata.csv
 
-# Ignore image files 
+# Ignore output images and visualizations
 *.png
 *.jpg
 *.jpeg
@@ -37,3 +38,6 @@ env/
 # Ignore operating system files
 Thumbs.db
 Desktop.ini
+
+# Ignore specific photo folders if not needed
+photos/
