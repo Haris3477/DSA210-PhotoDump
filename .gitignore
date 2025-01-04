@@ -1,1 +1,13 @@
 
+# Ignore log files
+*.log
+
+# Ignore DS_Store (macOS system file)
+.DS_Store
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore other temporary files
+*.tmp
+*.bak
