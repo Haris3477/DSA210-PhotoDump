@@ -1,4 +1,3 @@
-
 # Ignore log files
 *.log
 
@@ -7,7 +6,34 @@
 
 # Ignore Python cache files
 __pycache__/
+*.pyc
+*.pyo
 
-# Ignore other temporary files
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary files
 *.tmp
 *.bak
+*.swp
+*.swo
+
+# Ignore CSV files 
+*.csv
+
+# Ignore image files 
+*.png
+*.jpg
+*.jpeg
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore operating system files
+Thumbs.db
+Desktop.ini
