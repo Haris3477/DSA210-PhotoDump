@@ -1,3 +1,43 @@
 # Ignore log files
 *.log
 
+# Ignore DS_Store (macOS system file)
+.DS_Store
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore dataset-specific CSV files
+*_metadata.csv
+combined_metadata.csv
+
+# Ignore output images and visualizations
+*.png
+*.jpg
+*.jpeg
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore operating system files
+Thumbs.db
+Desktop.ini
+
+# Ignore specific photo folders if not needed
+photos/
