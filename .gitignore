@@ -22,7 +22,8 @@ env/
 *.swp
 *.swo
 
-# Ignore dataset-specific CSV files
+# Allow photo_metadata.csv but ignore other dataset-specific CSV files
+!photo_metadata.csv
 *_metadata.csv
 combined_metadata.csv
 
