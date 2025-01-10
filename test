@@ -3,7 +3,7 @@
 ### 4.2 Temporal Analysis
 
 #### 4.2.1 Daily Distribution
-![Photo Distribution by Day](./graphs/photos_by_day_pie.png)
+![Photo Distribution by Day](./graphs/ss/photos_by_day_pie.jpg)
 
 ```python
 import matplotlib.pyplot as plt
