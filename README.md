@@ -60,6 +60,62 @@ The primary information used will be timestamps embedded in the EXIF data of the
 
 ---
 
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Haris3477/DSA210-PhotoDump.git
+   cd DSA210-PhotoDump
+   ```
+
+2. Install required dependencies:
+   ```bash
+   pip install pandas matplotlib seaborn numpy pillow
+   ```
+
+3. Add your photos:
+   - Place your photos in the `photos` directory within the project folder
+   - Supported formats: .jpg, .jpeg, .png
+
+4. Run the analysis scripts:
+
+   For Python 3.x:
+   ```bash
+   python3 gfotos.py
+   python3 analyze_photos.py
+   python3 visualize_photos.py
+   ```
+
+   For Python 2.x:
+   ```bash
+   python gfotos.py
+   python analyze_photos.py
+   python visualize_photos.py
+   ```
+
+## Script Descriptions
+- `gfotos.py`: Extracts EXIF metadata from photos
+- `analyze_photos.py`: Performs statistical analysis on the extracted data
+- `visualize_photos.py`: Generates visualizations and plots
+
+## Output
+The scripts will generate:
+- CSV files with extracted metadata
+- Statistical analysis results
+- Visualization plots in the `graphs` directory
+
+## Requirements
+- Python 3.x (recommended) or Python 2.x
+- Required Python packages listed in dependencies
+- Sufficient disk space for photo processing
+
+## Troubleshooting
+If you encounter permission issues when running the scripts, try:
+```bash
+chmod +x gfotos.py analyze_photos.py visualize_photos.py
+```
+
 ### **Hypothesis**
 
 - **Hypothesis (H₁):**  
