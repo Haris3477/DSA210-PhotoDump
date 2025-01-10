@@ -1,10 +1,6 @@
 # Analysis of Temporal Patterns in Personal Photography: A Statistical Investigation
 A Data Science Research Report
 
-![Python Version](https://img.shields.io/badge/python-3.8-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-
-
 This study analyzed temporal patterns in personal photography behavior through examination of EXIF metadata from Google Photos (n=3,567) spanning 2000-2023. The research tested a specific hypothesis about peak photography times during 2015-2016, employing statistical analysis to identify significant patterns in photo-taking behavior. Results indicated rejection of the null hypothesis (p < 0.05) with notable deviations from hypothesized patterns.
 
 1. Introduction
@@ -300,3 +296,11 @@ Directory Structure
 ├── data/
 │   └── processed_metadata.csv
 └── report.md
+
+
+// The study conclusively rejected the null hypothesis that photos were predominantly taken at 8 PM on Thursdays during 2015-2016 
+(p = 0.0023 < α = 0.05). The analysis revealed significantly different patterns than hypothesized: peak photo-taking activity actually
+occurred at 11 PM (23:00), not 8 PM, and Tuesday emerged as the most active day rather than Thursday, with 17.1% of total photos 
+taken. Additionally, contrary to the hypothesized evening preference, the temporal distribution showed a broader spread throughout the
+day, with substantial activity between 2 PM and 11 PM. These findings highlight a notable disparity between perceived and 
+actual photo-taking behavior, demonstrating how data-driven analysis can reveal patterns that differ from memory-based assumptions.
